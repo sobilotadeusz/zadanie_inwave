@@ -1,0 +1,309 @@
+/*
+4ca1af      błękit
+c2c2c2      szary
+2c3e50      granat
+*/
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Montserrat", "Playfair_Display";
+}
+
+
+.name{
+    float: left;
+    height: 100px;
+    padding: 32px 0 0 75px;
+}
+
+.dailylist{
+    color: #4ca1af;
+    font-family: "Playfair+Display";
+    text-decoration: none;
+}
+
+.mainnav ul{
+    list-style: none;
+}
+
+.mainnav li{
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+.mainnav a{
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mainnav a:hover{
+    text-decoration: none;
+}
+
+.mainnav{
+    float: right;
+    padding: 25px 100px;
+}
+
+.menuicon{
+    position: absolute;
+    top:25px;
+    right: 25px;
+    background-image: url(img/toogler.png);
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+}
+
+.properties{
+    text-align: center;
+    display: block;
+    width: 200px;
+    float: left;
+    text-decoration: none;
+    color: #4ca1af;
+    padding: 5px;
+    margin-top: -5px;
+    border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 2px solid #4ca1af;
+}
+
+@media only screen and (max-width:920px){
+
+    .menuicon{
+        visibility: visible;
+        display: inline-block;
+    }
+
+    .menuicon:hover{
+        background-color: #c2c2c2;
+    }
+
+    .mainnav ul, .mainnav:active ul{
+        display: none;
+        position: absolute;
+        padding: 10px;
+        background-color: #c2c2c2;  /* Kolor podmenu */
+        right: 10px;
+        top: 62px;
+        width: 40%;
+        min-width: 250px;
+    }
+
+    .mainnav:hover ul{
+        display: block;
+    }
+
+    .mainnav li{
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .properties{
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+}
+
+
+/*search*/
+
+.search:hover > .searchtxt{
+    width: 250px;
+    transition: 0.8s;
+}
+
+.searchtxt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    width: 0px;
+    padding: 6px 0 11px 0;
+    transition: 0.8s;
+}
+
+.searchbutton{
+    align-items: center;
+}
+
+
+.search{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    padding: 0px 10px 0px 10px;
+    background: white;
+    border-radius: 40px;
+}
+
+
+/*      header        */
+
+.header{
+    height: 200px;
+    background-color: #c2c2c2;
+    text-align: center;
+    padding: 60px;
+    color: white;
+}
+
+.header h1{
+    font-family: "Playfair+Display";
+}
+
+.path{
+    display: inline-block;
+    padding: 10px 0 0 0;
+    font-family: "Playfair+Display";
+}
+
+
+/*      main content      */
+
+.content{
+    padding: 10px;
+}
+
+.maincontent{
+    padding: 40px 0;
+}
+
+.content img{
+    width: 100%;
+}
+
+.categoriesarticle{
+    float: left;
+    padding: 20px 0 10px 0;
+    color: #c2c2c2;
+}
+
+.datearticle{
+    float: right;
+    padding: 20px 0 10px 0;
+    color: #c2c2c2;
+}
+
+.titlearticle{
+    padding: 10px 0;
+    color: #2c3e50;
+}
+
+.contentarticle{
+    padding: 10px 0;
+    color: #2c3e50;
+}
+
+.author{
+    padding: 10px 0 20px 0;
+    color: #c2c2c2;
+}
+
+
+/*   asside    */
+
+.subscribe{
+    padding: 76px 0;
+    height: 100%;
+    background-color: #4ca1af;
+    color: white;
+}
+
+.email input{
+    width: calc(100% - 20px);
+    border: none;
+    background-color: #4ca1af;
+    color: white;
+}
+
+.borderemail{
+    padding: 3px;
+}
+
+.email input::placeholder{
+    color: white;
+}
+
+.email input[type="submit"]{
+    background-image: url(img/submitemail.png);
+    background-repeat: no-repeat;
+    width: 15px;
+    border: none;
+    outline: none;
+    background-color: #4ca1af;
+    cursor: pointer;
+    padding: 0px 8px 0px 7px;
+}
+
+
+
+/*         footer          */
+
+.backgroundfooter{     /*  koperta  */
+    position:relative;
+    top: 410px;
+    margin: -600px 0 0 -150px;
+    opacity: 0.2;
+    width: 600px;
+    visibility: visible;
+}
+
+@media only screen and (max-width:920px){  /* ukrywanie koperty na małych rozdzielczościach */
+    .backgroundfooter{
+        visibility: hidden;
+    }
+}
+
+.footer{
+    padding: 50px 0 0 0;;
+    height: 100%;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.footer article{
+    padding: 20px;
+}
+
+.footernav{
+    overflow: hidden;
+}
+.categorieslink{
+    display: block;
+    width: 50%;
+    float: left;
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+}
+
+.categorieslinkactive{
+    color: #4ca1af;
+}
+
+.mapsize{
+    width:100%;
+    height: auto;
+}
+
+.footer h2{
+    padding: 0 0 20px 0;
+}
+
+.footer img{
+    float:left;
+}
+
+.media img{
+    float: right;
+
+}
